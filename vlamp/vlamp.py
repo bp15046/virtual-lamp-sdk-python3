@@ -3,14 +3,14 @@ import json
 
 
 class Lamp(MQTTPublishInterface):
-    def enable(self);
+    def enable(self):
         self.open("PrototypingEnvironment/Actuator/Lamp")
 
-    def disable(self)
+    def disable(self):
         self.close()
 
     def on(self):
         self.write(json.dumps({"power":"on"}))
 
     def off(self):
-        self.write(json.dumps({"power":"off"})
+        self.write(json.dumps({"power":"off"}))
